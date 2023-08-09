@@ -6,7 +6,6 @@ export const Background = () => {
 
   useEffect(() => {
     runBackground();
-    return () => cancelAnimationFrame(runBackground);
   }, []);
 
   return <canvas ref={canvasRef} width="36" height="36" />;
