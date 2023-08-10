@@ -1,34 +1,53 @@
-
 .header-layout {
-
-    justify-content: center;
-    color: #FFF;
-    padding-top: 30px;
-    font-family: Inter;
-
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  color: #fff;
+  margin: 70px 48px 42px 48px;
+  font-family: Inter;
 }
 
-.title {
-
-    font-size: 40px;
-    line-height: normal;
-    text-align: center;
-
+.header-title {
+  font-size: 4rem;
+  line-height: normal;
+  margin-bottom: 0;
 }
 
-.title .AI {
-
-    background: linear-gradient(180deg, #C85555 6.25%, #A2A52C 94.79%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
+.header-title .AI {
+  background: linear-gradient(180deg, #c85555 6.25%, #a2a52c 94.79%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .header-text {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 0;
+}
 
-    font-size: 24px;
-    font-weight: 400;
+@media (min-width: 740px) and (max-width: 1024px) {
+  .header-layout {
+    width: 90%;
+  }
+  .header-text {
+    width: 60%;
+  }
+}
+
+@media (min-width: 740px) {
+  .header-layout {
+    max-width: 650px;
+    margin: 70px auto;
+    align-items: center;
+  }
+
+  .header-title {
+    font-size: 6.4rem;
+  }
+
+  .header-text {
+    font-size: 2.4rem;
     text-align: center;
-
+  }
 }
