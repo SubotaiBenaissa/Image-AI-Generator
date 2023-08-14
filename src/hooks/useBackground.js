@@ -1,36 +1,12 @@
 import { useEffect, useRef } from "react";
+import { R, G, B } from "../helpers/setColorsFunctions";
 
 export const useBackground = () => {
   const canvasRef = useRef(null); // Inicializo useRef
   const tRef = useRef(0);
   const contextRef = useRef(null); // Para evitar un null/undefined uso el useRef
 
-  const R = (x, y, t) => {
-    return Math.floor(20 * Math.cos((x * x - y * y) / 300 + t));
-  };
-
-  const G = (x, y, t) => {
-    return Math.floor(
-      20 * Math.sin((x * x * Math.cos(t / 4) + y * y * Math.sin(t / 3)) / 300)
-    );
-  };
-
-  const B = (x, y, t) => {
-    return Math.floor(
-      20 *
-        Math.sin(
-          5 * Math.sin(t / 9) +
-            ((x - 100) * (x - 100) + (y - 100) * (y - 100)) / 1100
-        )
-    );
-  };
-
   const runBackground = () => {
-    // const canvas = canvasRef.current;
-    // const context = contextRef.current;
-
-    // if (!canvas || !context) return;
-
     for (let x = 0; x <= 35; x++) {
       for (let y = 0; y <= 35; y++) {
         col(
