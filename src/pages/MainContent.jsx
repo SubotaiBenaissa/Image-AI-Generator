@@ -1,4 +1,5 @@
 import { Background } from "../components/Background"
+import { Form } from "../components/Form"
 import { Header } from "../components/Header"
 
 export const MainContent = () => {
@@ -7,6 +8,7 @@ export const MainContent = () => {
       <div>
         <Background />
         <Header />
+        <Form />
       </div>
     )
 
